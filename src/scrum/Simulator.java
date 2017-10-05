@@ -1,8 +1,11 @@
 package scrum;
 
 public class Simulator {
-	public int calc() {
+	
+	private static int storyPoint = 100;
+	
+	public int calc(int velocity) {
 		
-		return 1;
+		return storyPoint / velocity;
 	}
 }
