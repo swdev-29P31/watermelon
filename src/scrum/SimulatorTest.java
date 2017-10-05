@@ -10,18 +10,18 @@ public class SimulatorTest {
 
 	@Test
 	public void test() {
-		int result = 0;
+		double result = 0;
 		Simulator sm = new Simulator();
 		result = sm.calc(100);
-		assertTrue(result == 1);
+		assertTrue(result == 0.5);
 	}
 
 	@Test
 	public void test2() {
-		int result = 0;
+		double result = 0;
 		Simulator sm = new Simulator();
 		result = sm.calc(50);
-		assertTrue(result == 2);
+		assertTrue(result == 1);
 	}
 	
 }

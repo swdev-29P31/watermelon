@@ -2,10 +2,11 @@ package scrum;
 
 public class Simulator {
 	
-	private static int storyPoint = 100;
+	private static final int STORY_POINT = 100;
+	private static final double SPRINT_PERIOD = 0.5;
 	
-	public int calc(int velocity) {
+	public double calc(int velocity) {
 		
-		return storyPoint / velocity;
+		return (STORY_POINT / velocity) * SPRINT_PERIOD;
 	}
 }
