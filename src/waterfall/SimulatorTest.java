@@ -10,7 +10,7 @@ public class SimulatorTest {
 	public void testMain() {
 		int result = 0;
 		Simulator sm = new Simulator();
-		result = sm.calc(100);
+		result = sm.calc(50);
 		assertTrue(result == 1);
 	}
 	
@@ -18,7 +18,7 @@ public class SimulatorTest {
 	public void testMain2() {
 		int result = 0;
 		Simulator sm = new Simulator();
-		result = sm.calc(50);
+		result = sm.calc(25);
 		assertTrue(result == 2);
 	}
 
