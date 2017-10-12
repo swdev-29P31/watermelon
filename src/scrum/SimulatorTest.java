@@ -14,7 +14,7 @@ public class SimulatorTest {
 	//TODO ウォーターフォールが先だよ
 	//TODO ウォーターフォールできたよね？
 	//TODO 何を渡したら(ベロシティ)何が返ってくるのか(ピーナッツすべてを完了させるのに何スプリント必要か)
-	//TODO 何を渡したら(何スプリント必要かと、1スプリントの期間)何が返ってくるのか(期間(month)) → Happy end
+	//TODO 何を渡したら(ベロシティと、1スプリントの期間)何が返ってくるのか(期間(month)) → Happy end
 	
 	@Test
 	public void test() {
