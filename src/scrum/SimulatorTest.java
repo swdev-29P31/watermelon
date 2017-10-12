@@ -8,13 +8,13 @@ import scrum.Simulator;
 
 public class SimulatorTest {
 
-	//TODO ƒs[ƒiƒbƒc‚ÍŒÅ’è
-	//TODO ƒs[ƒiƒbƒc‚É‘Î‚µ‰½ƒXƒvƒŠƒ“ƒg•K—v‚©‚ðŽZo
-	//TODO ƒxƒƒVƒeƒB‚ðŽw’è‚µ‚½‚ç‰½ƒXƒvƒŠƒ“ƒg•K—v‚©‚ðŽZo
-	//TODO ƒEƒH[ƒ^[ƒtƒH[ƒ‹‚ªæ‚¾‚æ
-	//TODO ƒEƒH[ƒ^[ƒtƒH[ƒ‹‚Å‚«‚½‚æ‚ËH
-	//TODO ‰½‚ð“n‚µ‚½‚ç(ƒxƒƒVƒeƒB)‰½‚ª•Ô‚Á‚Ä‚­‚é‚Ì‚©(ƒs[ƒiƒbƒc‚·‚×‚Ä‚ðŠ®—¹‚³‚¹‚é‚Ì‚É‰½ƒXƒvƒŠƒ“ƒg•K—v‚©)
-	//TODO ‰½‚ð“n‚µ‚½‚ç(‰½ƒXƒvƒŠƒ“ƒg•K—v‚©‚ÆA1ƒXƒvƒŠƒ“ƒg‚ÌŠúŠÔ)‰½‚ª•Ô‚Á‚Ä‚­‚é‚Ì‚©(ŠúŠÔ(month)) ¨ Happy end
+	//TODO ãƒ”ãƒ¼ãƒŠãƒƒãƒ„ã¯å›ºå®š
+	//TODO ãƒ”ãƒ¼ãƒŠãƒƒãƒ„ã«å¯¾ã—ä½•ã‚¹ãƒ—ãƒªãƒ³ãƒˆå¿…è¦ã‹ã‚’ç®—å‡º
+	//TODO ãƒ™ãƒ­ã‚·ãƒ†ã‚£ã‚’æŒ‡å®šã—ãŸã‚‰ä½•ã‚¹ãƒ—ãƒªãƒ³ãƒˆå¿…è¦ã‹ã‚’ç®—å‡º
+	//TODO ã‚¦ã‚©ãƒ¼ã‚¿ãƒ¼ãƒ•ã‚©ãƒ¼ãƒ«ãŒå…ˆã ã‚ˆ
+	//TODO ã‚¦ã‚©ãƒ¼ã‚¿ãƒ¼ãƒ•ã‚©ãƒ¼ãƒ«ã§ããŸã‚ˆã­ï¼Ÿ
+	//TODO ä½•ã‚’æ¸¡ã—ãŸã‚‰(ãƒ™ãƒ­ã‚·ãƒ†ã‚£)ä½•ãŒè¿”ã£ã¦ãã‚‹ã®ã‹(ãƒ”ãƒ¼ãƒŠãƒƒãƒ„ã™ã¹ã¦ã‚’å®Œäº†ã•ã›ã‚‹ã®ã«ä½•ã‚¹ãƒ—ãƒªãƒ³ãƒˆå¿…è¦ã‹)
+	//TODO ä½•ã‚’æ¸¡ã—ãŸã‚‰(ä½•ã‚¹ãƒ—ãƒªãƒ³ãƒˆå¿…è¦ã‹ã¨ã€1ã‚¹ãƒ—ãƒªãƒ³ãƒˆã®æœŸé–“)ä½•ãŒè¿”ã£ã¦ãã‚‹ã®ã‹(æœŸé–“(month)) â†’ Happy end
 	
 	@Test
 	public void test() {

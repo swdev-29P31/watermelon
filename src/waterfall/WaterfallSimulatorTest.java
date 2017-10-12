@@ -4,33 +4,59 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class SimulatorTest {
-
-	//TODO ‚Ü‚¸‚ÍƒVƒ~ƒ…ƒŒ[ƒg‚·‚é‚½‚ß‚Ì‚à‚Ì‚ð‚Â‚­‚ë‚¤I
-	//TODO H’ö‚Å•ª‚¯‚éiŠeH’ö‚ÌlŒŽ‚Æl”‚ðƒpƒ‰ƒ[ƒ^‰»j
-	//TODO ÅŒã‚É‘«‚µ‡‚í‚¹‚é
-	//TODO ÝŒvA»‘¢AƒeƒXƒg‚Ì3ƒtƒF[ƒY‚ð‚»‚ê‚¼‚êì‚é
-	//TODO ƒEƒH[ƒ^[ƒtƒH[ƒ‹¨ƒXƒNƒ‰ƒ€‚Ì‡‚ÅA2017.10.12‚ÉÝŒv‚©‚çì‚é
-	//TODO@ÝŒv‚É‰½‚ð“n‚µ‚½‚ç(1lŒŽ“–‚½‚è‰½ƒs[ƒiƒbƒcÝŒv‚Å‚«‚é{l”)‰½‚ª•Ô‚Á‚Ä‚­‚é‚Ì‚©(ŠúŠÔimonthj)
-	//TODO@»‘¢‚É‰½‚ð“n‚µ‚½‚ç(1lŒŽ“–‚½‚è‰½ƒs[ƒiƒbƒc»‘¢‚Å‚«‚é{l”)‰½‚ª•Ô‚Á‚Ä‚­‚é‚Ì‚©(ŠúŠÔimonthj)
-	//TODO@ƒeƒXƒg‚É‰½‚ð“n‚µ‚½‚ç(1lŒŽ“–‚½‚è‰½ƒs[ƒiƒbƒcƒeƒXƒg‚Å‚«‚é{l”)‰½‚ª•Ô‚Á‚Ä‚­‚é‚Ì‚©(ŠúŠÔimonthj)
-	//TODO ‚·‚×‚Ä‘«‚µ‡‚í‚¹‚é ¨ Happy end
-	//TODO ŽŸƒXƒNƒ‰ƒ€
+public class WaterfallSimulatorTest {
 	
 	@Test
-	public void testMain() {
-		int result = 0;
-		Simulator sm = new Simulator();
-		result = sm.calc(50);
-		assertTrue(result == 1);
+	public void è¨ˆç®—ãƒ­ã‚¸ãƒƒã‚¯ãƒ†ã‚¹ãƒˆ_æœ€çµ‚çµæžœ() {
+		double result = 0;
+		WaterfallSimulator ws = new WaterfallSimulator();
+		
+		ws.setDesignPeanuts(10);
+		ws.setDesignPeople(2);
+		
+		ws.setMakePeanuts(10);
+		ws.setMakePeople(2);
+		
+		ws.setTestPeanuts(10);
+		ws.setTestPeople(2);
+				
+		result = ws.calc();		
+		assertEquals(5.0, result, 0);
 	}
 	
 	@Test
-	public void testMain2() {
-		int result = 0;
-		Simulator sm = new Simulator();
-		result = sm.calc(25);
-		assertTrue(result == 2);
+	public void è¨­è¨ˆãƒ•ã‚§ãƒ¼ã‚ºã®è¨ˆç®—ãƒ­ã‚¸ãƒƒã‚¯ãƒ†ã‚¹ãƒˆ_æœ€çµ‚çµæžœ() {
+		double result = 0;
+		Design design = new Design();
+		
+		int designPeanuts = 10;
+		int people = 2;
+		
+		result = design.calc(designPeanuts, people);
+		assertTrue(result == 1.5);
 	}
 
+	@Test
+	public void è£½é€ ãƒ•ã‚§ãƒ¼ã‚ºã®è¨ˆç®—ãƒ­ã‚¸ãƒƒã‚¯ãƒ†ã‚¹ãƒˆ_æœ€çµ‚çµæžœ() {
+		double result = 0;
+		Make make = new Make();
+		
+		int makePeanuts = 10;
+		int people = 2;
+		
+		result = make.calc(makePeanuts, people);
+		assertEquals(2.0, result, 0);
+	}
+	
+	@Test
+	public void ãƒ†ã‚¹ãƒˆãƒ•ã‚§ãƒ¼ã‚ºã®è¨ˆç®—ãƒ­ã‚¸ãƒƒã‚¯ãƒ†ã‚¹ãƒˆ_æœ€çµ‚çµæžœ() {
+		double result = 0;
+		waterfall.Test test = new waterfall.Test();
+		
+		int testPeanuts = 10;
+		int people = 2;
+		
+		result = test.calc(testPeanuts, people);
+		assertEquals(1.5, result, 0);
+	}
 }
