@@ -27,7 +27,7 @@ public class WaterfallSimulatorTest {
 	@Test
 	public void 設計フェーズの計算ロジックテスト_最終結果() {
 		double result = 0;
-		Design design = new Design();
+		DesignPhase design = new DesignPhase();
 		
 		int designPeanuts = 10;
 		int people = 2;
@@ -39,7 +39,7 @@ public class WaterfallSimulatorTest {
 	@Test
 	public void 製造フェーズの計算ロジックテスト_最終結果() {
 		double result = 0;
-		Make make = new Make();
+		MakePhase make = new MakePhase();
 		
 		int makePeanuts = 10;
 		int people = 2;
@@ -51,7 +51,7 @@ public class WaterfallSimulatorTest {
 	@Test
 	public void テストフェーズの計算ロジックテスト_最終結果() {
 		double result = 0;
-		waterfall.Test test = new waterfall.Test();
+		TestPhase test = new TestPhase();
 		
 		int testPeanuts = 10;
 		int people = 2;

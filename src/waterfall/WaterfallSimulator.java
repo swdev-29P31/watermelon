@@ -19,9 +19,9 @@ public class WaterfallSimulator {
 	private int testPeople = 0;
 	
 	public double calc() {
-		Design design = new Design();
-		Make make = new Make();
-		Test test = new Test();
+		DesignPhase design = new DesignPhase();
+		MakePhase make = new MakePhase();
+		TestPhase test = new TestPhase();
 		
 		return design.calc(this.designPeanuts, this.designPeople) + 
 				make.calc(this.makePeanuts, this.makePeople) + 
