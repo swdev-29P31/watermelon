@@ -2,6 +2,7 @@ package waterfall;
 
 public class WaterfallSimulator {
 
+	// 100円ショップで売れるような電卓が完成するには100 PEANUTS 必要
 	protected static final int PEANUTS = 100;
 
 	protected static final double DESIGN_PEANUTS_RATE = 0.405;

@@ -5,14 +5,15 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class WaterfallSimulatorTest {
-	private int designPeanuts = 10;
+	// 相対大変さ
+	private int designPeanuts = 200;
 	private int makePeanuts = 10;
-	private int testPeanuts = 10;
+	private int testPeanuts = 18;
 
 	// 3人の感覚 最多は実装,
-	private int designPeople = 3;
-	private int makePeople = 10;
-	private int testPeople = 6;
+	private int designPeople = 1;
+	private int makePeople = 1;
+	private int testPeople = 1;
 
 	@Test
 	public void 計算ロジックテスト_最終結果() {
@@ -38,7 +39,7 @@ public class WaterfallSimulatorTest {
 		DesignPhase design = new DesignPhase();
 
 		result = design.calc(this.designPeanuts, this.designPeople);
-		assertEquals(1.35, result, 0.001);
+		assertEquals(0.5, result, 0.001);
 	}
 
 	@Test
