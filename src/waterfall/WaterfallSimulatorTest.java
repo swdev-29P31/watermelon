@@ -1,7 +1,6 @@
 package waterfall;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -37,7 +36,7 @@ public class WaterfallSimulatorTest {
 		DesignPhase design = new DesignPhase();
 
 		result = design.calc(this.designPeanuts, this.designPeople);
-		assertTrue(result == 1.5);
+		assertEquals(2.025, result, 0.0001);
 	}
 
 	@Test
@@ -46,7 +45,7 @@ public class WaterfallSimulatorTest {
 		MakePhase make = new MakePhase();
 
 		result = make.calc(this.makePeanuts, this.makePeople);
-		assertEquals(2.0, result, 0);
+		assertEquals(1.305, result, 0.0001);
 	}
 
 	@Test
@@ -55,6 +54,6 @@ public class WaterfallSimulatorTest {
 		TestPhase test = new TestPhase();
 
 		result = test.calc(this.testPeanuts, this.testPeople);
-		assertEquals(1.5, result, 0);
+		assertEquals(1.67, result, 0);
 	}
 }
