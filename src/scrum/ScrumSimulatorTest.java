@@ -1,34 +1,44 @@
 package scrum;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import scrum.ScrumSimulator;
+// 前提: 100円ショップで売れるような電卓が完成するには100 PEANUTS 必要
+// 前提: WFとScrum共に2ヶ月で終わるシミュレータを作る
+//　			人数は考えない（1人で電卓を作る）
+// TODO: WFとScrumで同じ期間が返ってくるシミュレータを作る
+// 			今の計算ロジックを更新する（設計から考える, 議事録を見なさい）
+//			WFの計算が割合を加味しているが、加味しないロジックに変更する
+//			100に対してどれ程の設計, 実装, テストが必要かをだすロジックにする
+// TODO: Scrumは1monthに100をどれくらい減らせるかをだすロジックにする（設計から考える, 議事録を見なさい）
+//			50減らせるようにするので2ヶ月になるようにする
+// TODO が終わったらやりたいこと
+// 		main関数が欲しい
+// 		ロジックが固まったらテストは値を変えない
 
 public class ScrumSimulatorTest {
+	private int velocity = 14;
+	private double sprintTerm = 0.5;
 
-	//TODO ピーナッツは固定
-	//TODO ピーナッツに対し何スプリント必要かを算出
-	//TODO ベロシティを指定したら何スプリント必要かを算出
-	//TODO (1) 何を渡したら(ベロシティ)何が返ってくるのか(ピーナッツすべてを完了させるのに何スプリント必要か)
-	//TODO (2) 何を渡したら(ベロシティと、1スプリントの期間)何が返ってくるのか(期間(month)) → Happy end
-	
-	//TODO 10/12追加 TODO(1)、(2)メソッドを分ける(10/19にこれやる)
-	//     10/12時点では、（1）、(2)をまとめてcalcで計算するように設計されている。
-	
 	@Test
 	public void 計算ロジックテスト_最終結果() {
 		double result = 0;
 		ScrumSimulator ss = new ScrumSimulator();
-		
-		int velocity = 8;
-		double sprintTerm = 0.5;
-		
-		//TODO 作成途中(メソッドを分けた後に続きをすること！)
-		result = ss.calc(velocity, sprintTerm);
-		
-		assertEquals(6.5, result, 0);	
-		
+		double expectedTerm = 6.5;
+
+		result = ss.calcTerm(this.velocity, this.sprintTerm);
+		assertEquals(expectedTerm, result, 0);
 	}
+
+	@Test
+	public void スプリントを計算するテスト_最終結果() {
+		int result = 0;
+		ScrumSimulator ss = new ScrumSimulator();
+		int expextedSprintTime = 13;
+
+		result = ss.calcSprint(this.velocity);
+		assertEquals(expextedSprintTime, result);
+	}
+
 }
