@@ -8,9 +8,11 @@ public class WaterfallSimulatorTest {
 	private int designPeanuts = 10;
 	private int makePeanuts = 10;
 	private int testPeanuts = 10;
-	private int designPeople = 2;
-	private int makePeople = 2;
-	private int testPeople = 2;
+
+	// 3人の感覚 最多は実装,
+	private int designPeople = 3;
+	private int makePeople = 10;
+	private int testPeople = 6;
 
 	@Test
 	public void 計算ロジックテスト_最終結果() {
@@ -27,7 +29,7 @@ public class WaterfallSimulatorTest {
 		ws.setTestPeople(this.testPeople);
 
 		result = ws.calc();
-		assertEquals(5.0, result, 0);
+		assertEquals(2.167, result, 0.001);
 	}
 
 	@Test
@@ -36,7 +38,7 @@ public class WaterfallSimulatorTest {
 		DesignPhase design = new DesignPhase();
 
 		result = design.calc(this.designPeanuts, this.designPeople);
-		assertEquals(2.025, result, 0.0001);
+		assertEquals(1.35, result, 0.001);
 	}
 
 	@Test
@@ -45,7 +47,7 @@ public class WaterfallSimulatorTest {
 		MakePhase make = new MakePhase();
 
 		result = make.calc(this.makePeanuts, this.makePeople);
-		assertEquals(1.305, result, 0.0001);
+		assertEquals(0.261, result, 0.001);
 	}
 
 	@Test
@@ -54,6 +56,6 @@ public class WaterfallSimulatorTest {
 		TestPhase test = new TestPhase();
 
 		result = test.calc(this.testPeanuts, this.testPeople);
-		assertEquals(1.67, result, 0);
+		assertEquals(0.556, result, 0.001);
 	}
 }
