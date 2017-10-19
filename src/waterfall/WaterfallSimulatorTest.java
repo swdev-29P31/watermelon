@@ -1,38 +1,42 @@
 package waterfall;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 public class WaterfallSimulatorTest {
-	
+	private int designPeanuts = 10;
+	private int makePeanuts = 10;
+	private int testPeanuts = 10;
+	private int designPeople = 2;
+	private int makePeople = 2;
+	private int testPeople = 2;
+
 	@Test
 	public void 計算ロジックテスト_最終結果() {
 		double result = 0;
 		WaterfallSimulator ws = new WaterfallSimulator();
-		
-		ws.setDesignPeanuts(10);
-		ws.setDesignPeople(2);
-		
-		ws.setMakePeanuts(10);
-		ws.setMakePeople(2);
-		
-		ws.setTestPeanuts(10);
-		ws.setTestPeople(2);
-				
-		result = ws.calc();		
+
+		ws.setDesignPeanuts(this.designPeanuts);
+		ws.setDesignPeople(this.designPeople);
+
+		ws.setMakePeanuts(this.makePeanuts);
+		ws.setMakePeople(this.makePeople);
+
+		ws.setTestPeanuts(this.testPeanuts);
+		ws.setTestPeople(this.testPeople);
+
+		result = ws.calc();
 		assertEquals(5.0, result, 0);
 	}
-	
+
 	@Test
 	public void 設計フェーズの計算ロジックテスト_最終結果() {
 		double result = 0;
 		DesignPhase design = new DesignPhase();
-		
-		int designPeanuts = 10;
-		int people = 2;
-		
-		result = design.calc(designPeanuts, people);
+
+		result = design.calc(this.designPeanuts, this.designPeople);
 		assertTrue(result == 1.5);
 	}
 
@@ -40,23 +44,17 @@ public class WaterfallSimulatorTest {
 	public void 製造フェーズの計算ロジックテスト_最終結果() {
 		double result = 0;
 		MakePhase make = new MakePhase();
-		
-		int makePeanuts = 10;
-		int people = 2;
-		
-		result = make.calc(makePeanuts, people);
+
+		result = make.calc(this.makePeanuts, this.makePeople);
 		assertEquals(2.0, result, 0);
 	}
-	
+
 	@Test
 	public void テストフェーズの計算ロジックテスト_最終結果() {
 		double result = 0;
 		TestPhase test = new TestPhase();
-		
-		int testPeanuts = 10;
-		int people = 2;
-		
-		result = test.calc(testPeanuts, people);
+
+		result = test.calc(this.testPeanuts, this.testPeople);
 		assertEquals(1.5, result, 0);
 	}
 }
