@@ -1,11 +1,11 @@
 package simulator;
 
 public class WaterfallAbility {
-	
-	private static final int DESIGN = 17;
+
+	private static final int DESIGN = 18;
 	private static final int IMPLIMENTATION = 10;
-	private static final int ACCEPTANCE = 12;
-	
+	private static final int ACCEPTANCE = 11;
+
 	public static int getDesign() {
 		return DESIGN;
 	}
@@ -14,5 +14,5 @@ public class WaterfallAbility {
 	}
 	public static int getAcceptance() {
 		return ACCEPTANCE;
-	}	
+	}
 }
